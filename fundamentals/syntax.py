@@ -248,7 +248,6 @@ def largeSequence(n) :
 
 # creates generator
 genExp = ( (x * x) for x in range(20))
-
 print(list(genExp))
 
 

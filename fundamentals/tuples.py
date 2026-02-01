@@ -3,6 +3,8 @@
 # unchangeable items
 # allow duplicates
 
+import string
+
 tupConstruct = tuple(('a', 'b', 'c', 'c'))
 
 tup = ('a' ,'b', 'c')
@@ -46,10 +48,15 @@ print(getAandB(tupConstruct))
 
 nextTuples = ('hello', 'world')
 
-
-
 def getAllTup(tup1, tup2) :
     return tup1 + tup2
 
 
 # print(getAllTup(tupConstruct, nextTuples))
+
+
+
+
+
+
+# print(tuple(string.ascii_uppercase))

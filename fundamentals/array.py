@@ -20,7 +20,7 @@ import string
 alphabet_list = list(string.ascii_lowercase)
 
 new = alphabet_list.append([10, 20, 30]) #  this new  does not get the latest value after append
-
+  
 # alphabet_list.clear()
 
 newList = alphabet_list.copy()

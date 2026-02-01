@@ -1,0 +1,71 @@
+[2026-01-30 14:23:11] ERROR user42 Failed to connect to database
+[2026-01-30 14:24:02] INFO user12 Login successful
+[2026-01-30 14:25:19] WARNING user42 Slow response detected
+[2026-01-30 14:26:01] ERROR user99 Timeout while fetching data
+
+
+timestamp
+log level (INFO, WARNING, ERROR)
+user
+message
+
+
+
+Generate these statistics
+Total number of logs
+Count per log level (INFO / WARNING / ERROR)
+Top 3 users with the most log entries
+First and last log timestamps
+
+
+
+
+Error insights
+For ERROR logs only:
+Group errors by user
+For each user, show how many errors they had
+
+
+
+
+--- LOG SUMMARY ---
+Total logs: 120
+
+logs count
+
+
+Log Levels:
+
+logs dictionary
+INFO: 70
+WARNING: 30
+ERROR: 20
+
+
+
+Top Users:
+
+user dictionary
+
+1. user42 (18 logs)
+2. user12 (15 logs)
+3. user99 (10 logs)
+
+
+
+
+Time Range:
+
+timeLimit or Termination
+
+From: 2026-01-30 09:10:02
+To:   2026-01-30 18:45:55
+
+Errors by User:
+user42: 5
+user99: 4
+
+
+
+client -> send json object with status  
+server -> server analyze status then proceeds to logs 

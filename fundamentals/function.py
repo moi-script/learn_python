@@ -23,3 +23,30 @@ def change(list) :
 print(change(thisList))
 
 
+
+
+# * args allows function any number of positional arguments, 
+
+
+# **kargs -> keyword arguments, it becomes dictionary and can be access using their keys 
+
+
+
+
+
+# *args
+def testArgs(*args) :
+    for ar in args :
+        print(ar)
+
+testArgs("a", "b", "c", "d")
+
+
+
+
+def testKargs(**test) :
+    for key, value in test.items() :
+        print(key)
+
+            
+testKargs(name="John", age=30)

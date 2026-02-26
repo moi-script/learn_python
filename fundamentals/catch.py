@@ -42,4 +42,3 @@ def openFile(fileName) :
         logging.error(f"Unable to write in the file {e}")
   
 openFile("test.txt")    
-    

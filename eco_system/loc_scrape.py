@@ -3,11 +3,9 @@
 # PowerShell command on them (for example, getting the SHA256 security hash of each file).
 
 
+
 import subprocess
 from pathlib import Path
-
-
-
 
 def scrapeLocalFile() :
     

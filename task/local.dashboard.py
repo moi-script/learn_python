@@ -120,7 +120,6 @@ def filter_by_category (dbContents, type):
 def filter_by_date(dbContents, type) :
     return filter(lambda a : a == type, dbContents)
     
-    
 def dateFormat(date_input) :
     date_obj = datetime.strptime(date_input, "%Y-%m-%d %H:%M:%S")
     
@@ -132,8 +131,8 @@ def dateFormat(date_input) :
         "month_num" : month_num,
         "year" : year,
         "day" : day
-        
     }
+    
 # print(dateFormat("2026-02-26 16:27:16"))
 
 

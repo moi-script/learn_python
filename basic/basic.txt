@@ -1,0 +1,15 @@
+// basic syntax
+// variables and data types
+// operators
+// working with string
+// conditionals
+// loops
+
+// type casting 
+// exceptions
+// function built in function
+// list, tuples, sets
+// dictionaries
+
+
+

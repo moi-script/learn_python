@@ -125,5 +125,3 @@ def readByComprehension(l : list) :
 
 
 
-
-

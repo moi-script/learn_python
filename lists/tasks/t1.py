@@ -1,3 +1,4 @@
+import  string
 numberList = [2, 3, 4, 5, 6, 7]
 numberList2 = [2, 10, 20, 3]
 def get_even_numbers(nums : list[int]) -> list[int] :
@@ -47,12 +48,11 @@ def colorShift(colors : list[str]) ->  dict[list[str], str] :
     
     
 # print(colorShift(colors))
-
+# the function should filter the type of value bases on the dictionary 
 schema = {
     "number" : int,
     "string" : str
 }
-
 
 def strictBasedFiltering(data : list, schema : dict) :
     return [x for x in data if isinstance(x, tuple(schema.values())) and not isinstance(x, bool)] # this can't determined the boolean value
@@ -64,6 +64,7 @@ def strictBasedFiltering(data : list, schema : dict) :
 # sort() -> returns key for 0 = numbers, 1 = string | text
 
 
+# brute force for solving sorting of number and integer at once 
 def numerical(n) -> dict : 
     def closeError(x) :
         isNum = False
@@ -82,8 +83,6 @@ def numerical(n) -> dict :
         "end" : len(nums),
         "start" : 0
     }
-
-
 
 def advanceSorting_v1(data : list) -> list[str | int] | None :
     data.sort(key= str.lower)
@@ -107,3 +106,36 @@ def advanceSorting_v2(data : list) -> list[str | int] :
     return data
 
 print(advanceSorting_v2(["Banana", "10", "apple", "2", "Cherry"]))
+
+
+
+
+# cleaning user input
+
+def cleanUserData_v1(data : list) -> list :
+    def  remove_short(n) :
+        
+        c = cleanWhiteSpace(n)
+        if len(c) < 3 :
+            return False
+        else :
+            return True
+    
+    def cleanWhiteSpace(n) :
+        return ''.join(char for char in n if char not in string.whitespace)
+    
+    
+    return [cleanWhiteSpace(x).lower().capitalize() for x in data if remove_short(x)]
+        
+print(cleanUserData_v1(["  aLiCe ", "bo", "   cHaRliE  ", "ed", "DAVE", " x "]))
+# print(cleanUserData(["  aLiCe ", "bo", "   cHaRliE  ", "ed", "DAVE", " x "]))
+
+
+# clean version  
+def  cleanUserData_v2(data : list) -> list :
+    return [x.strip().title() for x in data if len(x.strip() >=3)]
+
+
+
+
+

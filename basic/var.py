@@ -19,8 +19,8 @@
 n = 100 # now int class is pointing to n 
 p = 200
 
-print(id(n)) # 140709863239688
-print(id(p)) # 140709863242888
+# print(id(n)) # 140709863239688
+# print(id(p)) # 140709863242888
 
 
 
@@ -67,4 +67,72 @@ listed : list[tuple[str, str, str]] = [
     
 ]
 
-print(listed)
+# print(listed)
+
+
+
+
+
+# parallel way 
+
+x = y = z = 1000
+
+# print(x, y, z)
+
+
+
+
+ # Iterable Unpacking
+
+personList = ("John Smith", "Lyr", "John")
+# print(personList[0], personList[1], personList[2]) 
+
+# destructure
+p1, p2, p3 = personList
+
+
+
+
+# swap
+p1, p2  = p2, p1
+print(p1, p2)
+
+
+# expression 
+
+def loopInput() :
+    ins = input("Enter some text")
+    while ins != "done" :
+        print(ins)
+        ins = input("Enter some text ")
+        
+        
+# loopInput()
+
+
+# Global scope
+global_variable = "global"
+
+def outer_func():
+    # Nonlocal scope
+    nonlocal_variable = "nonlocal"
+    def inner_func():
+        # Local scope
+        local_variable = "local"
+        print(f"Hi from the '{local_variable}' scope!")
+        print(f"Hi from the '{nonlocal_variable}' scope!")
+        print(f"Hi from the '{global_variable}' scope!")
+    inner_func()
+    
+# test some fun 
+def dynamicText(arg) :
+    list = {}
+    for i in range(10) :
+        list[i] = f"Dynamic context game {arg}" 
+    
+    return list
+        
+dynamicTextList = dynamicText(input("Enter text : "))
+
+for inputList in  dynamicTextList:
+    print(dynamicTextList[inputList])

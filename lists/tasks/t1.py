@@ -139,3 +139,60 @@ def  cleanUserData_v2(data : list) -> list :
 
 
 
+
+
+
+
+# You are building a basic RPG inventory system. The player has their current 
+# inventory, and they just opened a treasure chest containing new items.
+
+# Your Task:
+# Write a function loot_chest(inventory: list, chest: list) that performs the following steps in order:
+
+# Join: Combine the inventory list and the chest list into a single new list.
+# You must use the unpacking operator (*) to do this (as seen in your join.py file).
+
+# Filter (Delete): The player immediately drinks all the "Potion" items. 
+# Use a list comprehension (like your removeTricks from crud.py) to remove every instance of "Potion" from the combined list.
+
+# Sort: Sort the remaining items alphabetically.
+
+# Return the final list.
+
+
+def loot_chest(inventory : list, chest : list) :
+    merge = [*inventory, *chest]
+    noPotionList = [x for x in merge if x != "Potion"]
+    noPotionList.sort(key=str.lower)
+    return noPotionList
+
+# print(loot_chest(["Sword", "Shield", "Potion"], ["Gold", "Potion", "Map", "Boots"]))
+    
+    
+    
+
+
+def flatten_grid(matrix : list) :
+    # return [x[:] for x in matrix]
+    # nest = []
+    # for x in matrix :
+    #     for y in x :
+    #         nest.append(y)
+        
+    # return [x for x in nest]
+    
+    # "Left-to-Right Rule".
+    # [ (item) (outer loop) (inner loop) ]
+    return [y for x in matrix for y in x]
+
+        
+
+# print(flatten_grid([
+#     ["A1", "A2", "A3"],
+#     ["B1", "B2", "B3"],
+#     ["C1", "C2", "C3"]
+# ]))
+
+
+
+

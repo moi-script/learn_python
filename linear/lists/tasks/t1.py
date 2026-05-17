@@ -105,7 +105,7 @@ def advanceSorting_v2(data : list) -> list[str | int] :
     data.sort(key=sortKey)
     return data
 
-print(advanceSorting_v2(["Banana", "10", "apple", "2", "Cherry"]))
+# print(advanceSorting_v2(["Banana", "10", "apple", "2", "Cherry"]))
 
 
 
@@ -127,7 +127,7 @@ def cleanUserData_v1(data : list) -> list :
     
     return [cleanWhiteSpace(x).lower().capitalize() for x in data if remove_short(x)]
         
-print(cleanUserData_v1(["  aLiCe ", "bo", "   cHaRliE  ", "ed", "DAVE", " x "]))
+# print(cleanUserData_v1(["  aLiCe ", "bo", "   cHaRliE  ", "ed", "DAVE", " x "]))
 # print(cleanUserData(["  aLiCe ", "bo", "   cHaRliE  ", "ed", "DAVE", " x "]))
 
 
@@ -200,5 +200,51 @@ def transform_numbers(numbers : list) :
     
     return [x//2 if x % 2 == 0 else x * 3 for x in numbers]
 
+# print(transform_numbers([1, 2, 3, 4, 5, 6]))
 
-print(transform_numbers([1, 2, 3, 4, 5, 6]))
+
+
+products = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+# 2 pages
+# 4 pages
+ 
+
+ 
+# print(firstPage)
+# print(secondPage)
+
+
+def get_page_v1(data : list, page : int, page_size : int) :
+    l = len(data)
+    
+    all_value = []
+    data_page_id = round(l/page_size)
+    data_page_value = []
+    
+        
+    for x in range(l) :
+        if (x + 1) % data_page_id == 0 :
+            data_page_value.append(data[x])
+            all_value.append(data_page_value)
+            data_page_value = []
+            
+            
+        else : 
+            data_page_value.append(data[x])
+        
+            
+    all_value.append(data_page_value)
+    
+            
+    
+    return all_value[page]
+    
+    
+    
+    
+# def get_page_v2(data : list, page : int, page_size) :
+    
+
+# print(get_page(products, page=2, page_size=3))
+
+

@@ -1,4 +1,7 @@
-# List items are ordered, changeable, and allow duplicate values.
+# List items are
+# ordered
+# changeable 
+# duplicate values.
 
 # indexing
 # negative indexing
@@ -15,7 +18,7 @@ testCases = ["test1", "test2", 'test3', "test4"]
 # by index
 
 def changeByIndex(l, index, newValue) :
-     l[index] = index
+     l[index] = newValue
      return l
 
 def changeRangeIndex(l, start, end) -> list : 

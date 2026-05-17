@@ -1,0 +1,11 @@
+| Feature     | List                 | `array`               |
+| ----------- | -------------------- | --------------------- |
+| Types       | Mixed                | Single type only      |
+| Flexibility | High                 | Low                   |
+| Memory      | Larger               | Smaller               |
+| Speed       | Slower (general use) | Faster (numeric only) |
+| Usage       | Very common          | Rare                  |
+
+
+--- Use list for everyday programming 
+--- Use array or NumPy for specific reason / efficiency matters 

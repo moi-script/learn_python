@@ -1,5 +1,5 @@
 
-from lists.crud import changeByIndex 
+# from lists.crud import changeByIndex 
 
 # ordered 
 # unchangeable 
@@ -49,8 +49,9 @@ def getTupsItemByRange(data : tuple, start : int, end:int) :
 # update tuples -> tuples is immutable so we need to convert this first into list before config
 
 
-list_data = list(data) # data set of tuples are not list
-list_mutate = changeByIndex(list_data, 10, "Hello world")
+# list_data = list(data) # data set of tuples are not list
+
+# list_mutate = changeByIndex(list_data, 10, "Hello world")
 
 def is_mutated(list_data : list) -> bool :
     for x in list_data :
@@ -70,4 +71,47 @@ def list_to_tuples(list_data : list) -> tuple | None :
 # python -m tuple.crud
 
 
+
+
+# we can delete the tuple without converting to list  first 
+
+# del data
+# print(data) # data is not defined -> strictly for tuples 
+
+
+
+
+# reading the tuples 
+
+
+# other method is using loops 
+
+
+
+# using unpack
+
+def get_tuple_pack(list_data : tuple) -> dict[str, str | list]: #  [key value] to type
+    (test1, test2, *allTest)  = list_data  # readability  unpack
+    return {
+        "test1" : test1,
+        "test2" : test2,
+        "allTest" : allTest
+    }
+
+# print(get_tuple_pack(data))
+
+
+
+
+# Joining  tuples
+
+# mergeTuples = data  + tupByConstructor
+# mergeByMultiply = data * 1
+# print(mergeByMultiply)
+
+
+
+# methods  -> .count(), ->  index()
+
+# we can just conver the tuple to list to allow some configureable options since tuples is immutable 
 
